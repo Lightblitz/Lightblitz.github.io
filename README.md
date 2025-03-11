@@ -1,2 +1,2 @@
 # Lightblitz.github.io
-Deploy data projects and charts on here
+This is my personal website with a few interactive dashboards created in Excel
