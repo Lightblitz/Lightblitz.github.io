@@ -8601,3 +8601,65 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+/* Hamburger Icon */
+#menu-toggle {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+	color: white;
+	cursor: pointer;
+	z-index: 2000;
+	transition: color 0.3s ease;
+}
+
+#menu-toggle:hover {
+	color: #ffcc00;
+}
+
+/* Slide-Out Menu */
+#slide-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 0;
+	background: rgba(0, 0, 0, 0.9);
+	overflow-x: hidden;
+	transition: width 0.3s ease;
+	z-index: 1500;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding-top: 4rem;
+	padding-right: 2rem;
+}
+
+#slide-menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#slide-menu ul li {
+	margin: 1rem 0;
+}
+
+#slide-menu ul li a {
+	color: white;
+	font-size: 1.2rem;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+#slide-menu ul li a:hover {
+	color: #ffcc00;
+}
+
+/* Reveal menu on hover */
+#menu-toggle:hover + #slide-menu,
+#slide-menu:hover {
+	width: 250px;
+}
