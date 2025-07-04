@@ -8605,7 +8605,7 @@ input, select, textarea {
 /* Hamburger Icon */
 #menu-toggle {
 	position: fixed;
-	top: 1rem;
+	top: 0.25rem;
 	right: 1rem;
 	font-size: 2rem;
 	color: white;
