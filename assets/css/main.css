@@ -8603,20 +8603,51 @@ input, select, textarea {
 			}
 
 /* Hamburger Icon */
+
+#menu-bg-trigger {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	z-index: 0; /* behind toggle */
+	pointer-events: none;
+}
+
+/* Hamburger base */
 #menu-toggle {
 	position: fixed;
-	top: 0.25rem;
+	top: 1rem;
 	right: 1rem;
 	font-size: 2rem;
-	color: white;
 	cursor: pointer;
 	z-index: 2000;
 	transition: color 0.3s ease;
+	color: white; /* default */
 }
 
 #menu-toggle:hover {
-	color: #ffcc00;
+	color: #47D3E5;
 }
+
+/* Light mode override */
+#menu-toggle.light {
+	color: black;
+}
+
+/* Initial hidden state */
+.menu {
+	transform: translateX(100%);
+	transition: transform 0.3s ease;
+	will-change: transform;
+	visibility: visible;
+}
+
+/* Shown state */
+.menu.show {
+	transform: translateX(0);
+}
+
 
 /* Slide-Out Menu */
 #slide-menu {
@@ -8625,7 +8656,7 @@ input, select, textarea {
 	right: 0;
 	height: 100%;
 	width: 0;
-	background: rgba(0, 0, 0, 0.9);
+	background: rgba(0, 0, 0, 0.397);
 	overflow-x: hidden;
 	transition: width 0.3s ease;
 	z-index: 1500;
@@ -8634,7 +8665,15 @@ input, select, textarea {
 	align-items: flex-end;
 	padding-top: 4rem;
 	padding-right: 2rem;
+	/* animation setup 
+	transform: translateX(100%);
+	transition: transform 0.3s ease;
+	will-change: transform; */
 }
+
+/* #slide-menu.show {
+	transform: translateX(0);
+} */
 
 #slide-menu ul {
 	list-style: none;
@@ -8655,7 +8694,7 @@ input, select, textarea {
 }
 
 #slide-menu ul li a:hover {
-	color: #ffcc00;
+	color: #47D3E5;
 }
 
 /* Reveal menu on hover */
@@ -8663,3 +8702,4 @@ input, select, textarea {
 #slide-menu:hover {
 	width: 250px;
 }
+
