@@ -14,18 +14,16 @@
 	</head>
 	<body class="is-preload">
 
-		<!-- Hamburger Icon -->
-		 			<div id="menu-bg-trigger"></div>
-					<div id="menu-toggle">&#9776;</div>
+		<div id="navbar-placeholder"></div>
 
-					<!-- Slide-Out Menu -->
-					<nav id="slide-menu" class="menu">
-						<ul>
-							<li><a href="projects.html">Projects</a></li>
-							<li><a href="portfolio.html">Portfolio</a></li>
-							<li><a href="blog.html">Blog</a></li>
-						</ul>
-					</nav>
+		<script>
+		fetch("navbar.html")
+			.then(res => res.text())
+			.then(data => {
+			document.getElementById("navbar-placeholder").innerHTML = data;
+			});
+		</script>
+
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
