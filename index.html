@@ -14,17 +14,19 @@
 	</head>
 	<body class="is-preload">
 
-		<div id="navbar-placeholder"></div>
+		
 
-		<script>
-		fetch("navbar.html")
-			.then(res => res.text())
-			.then(data => {
-			document.getElementById("navbar-placeholder").innerHTML = data;
-			});
-		</script>
+		<div id="menu-bg-trigger"></div>
+<div id="menu-toggle">&#9776;</div>
 
-
+<nav id="slide-menu" class="menu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="projects.html">Projects</a></li>
+  </ul>
+</nav>
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 
