@@ -8637,15 +8637,16 @@ input, select, textarea {
 
 /* Initial hidden state */
 .menu {
-	transform: translateX(100%);
+	transform: translateX(100vw);
 	transition: transform 0.3s ease;
 	will-change: transform;
-	visibility: visible;
+	visibility: hidden;
 }
 
 /* Shown state */
 .menu.show {
 	transform: translateX(0);
+	visibility: visible;
 }
 
 
