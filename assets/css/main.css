@@ -8718,3 +8718,29 @@ input, select, textarea {
   object-position: center;
   display: block;
 }
+
+/* Triple column for portfolio gallery */
+.gallery {
+  column-count: 3;
+  column-gap: 1.5rem;
+  padding: 2rem;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 980px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+    column-count: 1;
+  }
+}
