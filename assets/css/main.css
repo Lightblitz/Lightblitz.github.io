@@ -8719,7 +8719,7 @@ input, select, textarea {
   display: block;
 }
 
-.gallery-section {
+.gallery2-section {
     display: flex;
     justify-content: center;   /* center horizontally */
     align-items: center;       /* center vertically */
@@ -8728,7 +8728,7 @@ input, select, textarea {
     box-sizing: border-box;
 }
 
-.gallery {
+.gallery2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	align-items: center;  
@@ -8737,11 +8737,11 @@ input, select, textarea {
     width: 100%;
 }
 
-.gallery figure {
+.gallery2 figure {
     text-align: center;
 }
 
-.gallery img {
+.gallery2 img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
@@ -8750,7 +8750,7 @@ input, select, textarea {
     max-height: 100%;
 }
 
-.gallery figcaption {
+.gallery2 figcaption {
     margin-top: 8px;
     font-size: 0.9rem;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
