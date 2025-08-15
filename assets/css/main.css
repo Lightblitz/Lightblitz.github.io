@@ -8719,28 +8719,42 @@ input, select, textarea {
   display: block;
 }
 
-/* Triple column for portfolio gallery */
+.gallery-section {
+    display: flex;
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* center vertically */
+    min-height: 100vh;         /* full viewport height */
+    padding: 40px 20px;        /* top/bottom + side buffer */
+    box-sizing: border-box;
+}
+
 .gallery {
-  column-count: 3;
-  column-gap: 1.5rem;
-  padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	align-items: center;  
+    gap: 20px;
+    max-width: 1200px; /* controls side buffer */
+    width: 100%;
+}
+
+.gallery figure {
+    text-align: center;
 }
 
 .gallery img {
-  width: 100%;
-  display: block;
-  margin-bottom: 1.5rem;
-  border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
-@media screen and (max-width: 980px) {
-  .gallery {
-    column-count: 2;
-  }
+.gallery figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.7);
 }
 
-@media screen and (max-width: 600px) {
-  .gallery {
-    column-count: 1;
-  }
-}
+
+
